@@ -1,0 +1,39 @@
+@keyframes beat {
+    0% {
+        transform: scale(0.9);
+    }
+    20% {
+        transform: scale(1.3);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.persons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    .person {
+        display: flex;
+        background: rgb(237, 237, 237);
+        width: 250px;
+        height: 55px;
+        padding: 10px;
+        justify-content: space-between;
+        align-items: center;
+        .img {
+            img {
+                animation-name: beat;
+                animation-duration: 0.5s;
+                animation-timing-function: ease-out;
+                animation-play-state: running;
+
+                height: 45px;
+                &.heartattack {
+                    filter: grayscale(100%);
+                }
+            }
+        }
+    }
+}

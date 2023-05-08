@@ -1,0 +1,22 @@
+<div class="persons">
+  <div class="person" *ngFor="let person of persons">
+    <div class="info">
+      <div>id: {{ person.id }}</div>
+      <div>{{ person.name }}</div>
+      <div>
+        {{
+          person.heartattack ? "Ambulancia à caminho!" : ""
+        }}&NonBreakingSpace;
+      </div>
+    </div>
+
+    <div class="img">
+      <img
+        [ngClass]="{
+          heartattack: person.heartattack
+        }"
+        src="assets/coracao.png"
+      />
+    </div>
+  </div>
+</div>
